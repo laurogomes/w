@@ -1,20 +1,25 @@
-
 <head>
   <title>Clappr Player</title>
   <meta charset="UTF-8">
   <!-- Player -->
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/clappr/0.2.86/clappr.min.js"></script>
-  <!-- PIP plugin -->
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/clappr-pip-plugin@latest/dist/clappr-pip-plugin.js"></script>
+  <!-- Stats -->
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/clappr-stats/dist/clappr-stats.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/clappr-nerd-stats/dist/clappr-nerd-stats.min.js"></script>
 </head>
-
 <body>
   <div id="player"></div>
   <script>
     var player = new Clappr.Player({
-      source: "http://andre.iptvbr.tv:8080/live/Apptv/7rkfWKzgON/541.m3u8",
+      source: "http://andre.iptvbr.tv:8080/live/Apptv/7rkfWKzgON/564.m3u8",
       parentId: "#player",
-      plugins: [ClapprPIPPlugin]
+      plugins: [ClapprNerdStats, ClapprStats],
+      width: '100%',
+      height: '100%',
+      clapprNerdStats: {
+        shortcut: ['command+shift+s', 'ctrl+shift+s'],
+        iconPosition: 'top-right' // Values: 'top-right', 'top-left', 'bottom-right', 'bottom-left', 'none'
+      }
     });
   </script>
 </body>
