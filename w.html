@@ -1,25 +1,37 @@
-<head>
-  <title>Clappr Player</title>
-  <meta charset="UTF-8">
-  <!-- Player -->
-  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/clappr/0.2.86/clappr.min.js"></script>
-  <!-- Stats -->
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/clappr-stats/dist/clappr-stats.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/clappr-nerd-stats/dist/clappr-nerd-stats.min.js"></script>
-</head>
-<body>
-  <div id="player"></div>
-  <script>
-    var player = new Clappr.Player({
-      source: "http://andre.iptvbr.tv:8080/live/Apptv/7rkfWKzgON/564.m3u8",
-      parentId: "#player",
-      plugins: [ClapprNerdStats, ClapprStats],
-      width: '100%',
-      height: '100%',
-      clapprNerdStats: {
-        shortcut: ['command+shift+s', 'ctrl+shift+s'],
-        iconPosition: 'top-right' // Values: 'top-right', 'top-left', 'bottom-right', 'bottom-left', 'none'
-      }
+<script src="http://content.jwplatform.com/libraries/3cE3qw2G.js"></script>
+<div id='playerBLiyUVVsMPRD'></div>
+<script type='text/javascript'>
+ jwplayer('playerBLiyUVVsMPRD').setup({
+		width: '100%',
+		autostart: 'false',
+        height: '360',
+		repeat: 'false',
+		fallback: 'false',
+		title: 'Tudotv.tv',
+		logo: {
+		file: 'http://tudotv.com/tudotvlogo.png',
+		link: 'http://tudotv.tv'
+	},
+	abouttext: "Tudotv.com - Assistir novelas em HD!",
+	aboutlink: "http://tudotv.tv",
+playlist: [
+{
+title: 'Parte 1',
+image: 'http://tudotv.tv/fotos/33bdf9ebe3ad8ca70d5ce417b5c762e9.jpg',        
+file: 'http://andre.iptvbr.tv:8080/live/Apptv/7rkfWKzgON/533.m3u8',
+primary: 'flash'
+},
+{
+title: 'Parte 2',
+image: 'http://tudotv.tv/fotos/33bdf9ebe3ad8ca70d5ce417b5c762e9.jpg',        
+file: 'http://andre.iptvbr.tv:8080/live/Apptv/7rkfWKzgON/515.m3u8',
+primary: 'flash'
+},
+{
+title: 'Parte 3',
+image: 'http://tudotv.tv/fotos/33bdf9ebe3ad8ca70d5ce417b5c762e9.jpg',        
+file: 'http://andre.iptvbr.tv:8080/live/Apptv/7rkfWKzgON/533.m3u8',
+primary: 'flash'
+},]
     });
-  </script>
-</body>
+</script>
